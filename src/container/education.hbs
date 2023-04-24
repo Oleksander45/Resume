@@ -1,0 +1,31 @@
+<div>
+    <main>
+        {{#with main}}
+        <section>
+            {{>subtitle data=sub.[0].name big=sub.[0].big}}
+
+            <ul>
+                {{#each educations}}
+                <li>
+                    {{name}}
+                    {{#unless isEnd}}
+                    (not finished yet)
+                    {{/unless}}
+                </li>
+                {{/each}}
+            </ul>
+        </section>
+        <section>
+            {{>subtitle data=sub.[1].name big=sub.[1].big}}
+
+            <ul>
+                {{#each certificate}}
+                <li>
+                    {{name}} ({{id}})
+                </li>
+                {{/each}}
+            </ul>
+        </section>
+        {{/with}}
+    </main>
+</div>
