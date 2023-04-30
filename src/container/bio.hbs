@@ -1,0 +1,57 @@
+<h2>{{name}}</h2> <br />
+<hr />
+<hr />
+<time><b>born:</b> {{ birthdate}} <i>({{birthplace}})</i><br /><b>death:</b> {{deathdate}}
+    <i>({{deathplace}})</i></time><br />
+
+<b>Nationality:</b> {{nationality}}<hr /><br />
+<b>Occupation: </b> {{occupation}}<br /><br />
+<b> Famous work: </b>
+{{#each known_for}}
+<br />--{{this}}
+{{/each}}
+<br /><br />
+<b>Education:</b>
+{{#each education}}
+{{degree}}, {{field}}, {{institution}}, {{year}}
+{{/each}}
+<br /><br />
+<b>Notable publications:</b>
+{{#each notable_publications}}
+<ul>
+    <li><em><b>{{title}}</b></em>, {{year}}, {{publisher}}</li>
+</ul>
+{{/each}}
+<br /><hr/>
+<b>Partners:</b>
+{{#each partners}}
+<ul>
+    <li>{{name}}, {{relationship}}, <time>{{years}}</time></li>
+</ul>
+{{/each}}
+<hr/>
+
+
+<b>Awards:</b>
+{{>description data=awards}}
+<hr/>
+<b>Influences:</b><br />
+{{>this data=influences}}
+<b>Influenced:</b><br />
+{{>this data=influenced}}
+<b>Quotes:</b><br />
+{{>this data=quotes}}
+<hr/>
+<b>Major discoveries:</b><br/>
+{{>description data=major_discoveries}}<hr/>
+<b>Contributions:</b><br/><br/>
+{{#with contributions}}
+<i><b>{{title}}</b></i><br/>
+-{{description}}<br/>
+({{year}})<br/>
+//{{field}}//
+{{/with}}
+<hr/><hr/>
+
+
+
