@@ -1,0 +1,29 @@
+<div>
+    <h4>{{name}} <em>({{type}})</em></h4>
+   
+    <i>duration: {{duration}} hours</i> 
+        {{#with details }} 
+            {{#if museum}}
+                {{>name data=museum}}
+                    Exhibits:
+                            {{#each museum.exhibits}}
+                            <ul>
+                                <li>{{>ex}}</li>
+                            </ul>
+                            {{/each}}  
+                {{>guide data=guide}}
+            {{/if}}
+            {{#if venue}}
+                {{>name data=venue}}
+                    Performers:
+                        {{#each performers}}
+                            <ul>
+                                <li>{{>perf}}</li>
+                            </ul>
+                        {{/each}}
+                {{>guide data=guide}}
+            {{/if}}
+        {{/with}} 
+
+    
+</div>
