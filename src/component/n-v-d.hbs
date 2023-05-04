@@ -1,0 +1,20 @@
+<div>     
+    <strong><h3>{{name}}  {{#if version}} //{{version}}//{{/if}}</h3></strong>    
+     <i>{{description}}</i>  <br/><br/> <hr>
+        {{#if elements}} 
+        {{#each elements}}
+        {{>uni el="Element" data="Attributes" array=attributes}}
+        {{/each}}
+        {{/if}}
+        {{#if properties}}
+        {{#each properties}}
+        {{>uni el="property" data="Values" array=values }}
+        {{/each}}
+        {{/if}}
+        {{#if functions}}
+        {{#each functions}}
+        {{>uni el="Function" data=" Parameters" array= parameters }}
+        {{/each}}
+        {{/if}}
+
+</div>
