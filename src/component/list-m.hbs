@@ -1,0 +1,16 @@
+<div class="accordion-item">
+    {{>prename}}
+    <div id="flush-collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+        <div class="accordion-body">
+
+            {{#with syntax}}
+            {{>list name=variables prename="variables"}}
+            {{>list name=functions prename="functions"}}
+            {{>list name=conditionals prename="conditionals"}}
+            {{>list name=loops prename="loops"}}
+            {{>list name=classes prename="classes"}}
+            {{/with}}
+
+
+        </div>
+    </div>

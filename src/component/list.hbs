@@ -1,0 +1,13 @@
+<div class="accordion-item">
+    {{>prename}}
+    <div id="flush-collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+        <div class="accordion-body">
+
+            {{#each name}}
+            <ul>
+                <li>{{this}}</li>
+            </ul>
+            {{/each}}
+        </div>
+    </div>
+</div>
