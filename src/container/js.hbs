@@ -1,0 +1,19 @@
+<main>
+    <h2>
+        {{name}}
+    </h2>
+   
+    <h4><span class="badge text-bg-dark">{{ description}}</span></h4>    
+    <hr>    
+    <h6>History:  (<i >year - {{history.year}}, founder - {{history.founder}}</i>)</h6>
+    <hr>
+
+    <div class="accordion accordion-flush" id="accordionFlushExample">
+        {{>list name=types prename="Types"}}
+        {{>list-m name=syntax prename="Syntax"}} 
+        {{>list name=features prename="Features"}}
+        {{>list name= libraries prename="Libraries"}}              
+        {{>list name=tools prename="Tools"}}         
+        {{>list-c name=community prename="Community"}}
+    </div>
+</main>
