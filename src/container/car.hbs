@@ -1,0 +1,126 @@
+<main>
+    <h2 class="text-center text-success">{{make}} "{{model}}" </h2>
+    <hr>
+    <h3 class="text-center "><i>year: {{year}} color: </i> <span class="badge bg-secondary">Silver</span>
+    </h3>
+    <hr>
+
+    {{>name-car name="Features"}}
+    {{>name-car-75 name="Interior"}}
+    {{>name-car-25 name="Seats"}}
+    {{#with features}}
+    {{#with interior}}
+    {{#with seats}}
+
+    <Ul>
+        <li>{{>name-car-10 tit = "material" name=material}}</li>
+        <li>{{>name-car-10 tit = "color" name=color}}</li>
+        <li>{{>name-car-10m tit = "heated" name=heated}}</li>
+        <li>{{>name-car-10m tit = "ventilated" name=ventilated}}</li>
+    </Ul>
+    {{/with}}
+    {{>name-car-25 name="Dashboard"}}
+    {{#with dashboard}}
+
+    <Ul>
+        <li>{{>name-car-10 tit = "material" name=material}}</li>
+        <li>{{>name-car-10 tit = "color" name=color}}</li>
+        <li>{{>name-car-10l tit ="display" name= display}}</li>
+    </Ul>
+    {{/with}}
+    {{>name-car-25 name="Audio"}}
+    {{#with audio}}
+    <ul>
+        <li>{{>name-car-10 tit = "system" name=system}}</li>
+        <li>{{>name-car-10 tit = " speakers" name= speakers}}</li>
+        <li>{{>name-car-10m tit = "subwoofer" name=subwoofer}}</li>
+        <li>{{>name-car-10m tit = "bluetooth" name=bluetooth}}</li>
+        <li>{{>name-car-10m tit = "USB" name=USB}}</li>
+    </ul>
+    {{/with}}
+    {{/with}}
+    {{>name-car-75 name="Exterior"}}
+    {{>name-car-25 name="Wheels"}}
+    {{#with exterior}}
+    {{#with wheels}}
+    <ul>
+        <li>{{>name-car-10 tit = "size" name=size}}</li>
+        <li>{{>name-car-10 tit = " type" name= type}}</li>
+        <li>{{>name-car-10 tit = "color" name=color}}</li>
+
+    </ul>
+    {{/with}}
+    {{>name-car-25 name="Headlights"}}
+    {{#with headlights}}
+    <ul>
+        <li>{{>name-car-10 tit = " type" name= type}}</li>
+        <li>{{>name-car-10 tit = "brightness" name=brightness}}</li>
+        <li>{{>name-car-10m tit = "automatic" name=automatic}}</li>
+    </ul>
+    {{/with}}
+    {{>name-car-25 name="Sunroof"}}
+    {{#with sunroof}}
+    <ul>
+        <li>{{>name-car-10 tit = " type" name= type}}</li>
+        <li>{{>name-car-10 tit = " size" name= size}}</li>
+        <li>{{>name-car-10m tit = "automatic" name=automatic}}</li>
+    </ul>
+    {{/with}}
+    {{/with}}
+    {{>name-car-75 name="Safety"}}
+    {{>name-car-25 name="Airbags"}}
+    {{#with safety}}
+    {{#with airbags}}
+    <ul>
+        <li>{{>name-car-10 tit = "front" name= front}}</li>
+        <li>{{>name-car-10 tit = " side" name= side}}</li>
+        <li>{{>name-car-10 tit = " knee" name= knee}}</li>
+        <li>{{>name-car-10 tit = "rear" name= rear}}</li>
+    </ul>
+    {{/with}}
+    {{>name-car-25 name="Assistance"}}
+    {{#with assistance}}
+    <ul>
+        <li>{{>name-car-10m tit = "blind_spot_monitoring" name= blind_spot_monitoring}}</li>
+        <li>{{>name-car-10m tit = "rear_cross_traffic_aler" name=rear_cross_traffic_alert}}</li>
+        <li>{{>name-car-10m tit = "lane_departure_warning" name= lane_departure_warning}}</li>
+        <li>{{>name-car-10m tit = "collision_warning" name= collision_warning}}</li>
+    </ul>
+
+    {{/with}}
+    {{/with}}
+    {{/with}}
+    {{>name-car name="Engine"}}
+    {{#with engine}}
+    <ul>
+        <li>{{>name-car-10 tit = " type" name=type}}</li>
+        <li>{{>name-car-10 tit = " displacement" name=displacement}}</li>
+        <li>{{>name-car-10 tit = " horsepower" name=horsepower}}</li>
+        <li>{{>name-car-10 tit = " torque" name=torque}}</li>
+        <li>{{>name-car-10l-en tit ="transmission" name= transmission}}</li>
+    </ul>
+
+    {{/with}}
+    {{>name-car name="Fuel economy"}}
+    {{#with fuel_economy}}
+    <ul>
+        <li>{{>name-car-10 tit = " city" name=city}}</li>
+        <li>{{>name-car-10 tit = " highway" name=highway}}</li>
+        <li>{{>name-car-10 tit = " combined" name=combined}}</li>
+    </ul>
+
+    {{/with}}
+    {{>name-car name="Price"}}
+    {{#with price}}
+    <ul>
+        <li>{{>name-car-10 tit = " base" name= base}}</li>
+        <li>{{>name-car-10 tit = " destination" name=destination}}</li>
+        <li>{{>name-car-10l-pr tit = "options" name=options}}</li>
+    </ul>
+    {{>name-car name=" Total"}}
+    {{>name-car name= total}}
+
+
+    {{/with}}
+   
+</main>
