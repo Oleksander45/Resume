@@ -1,0 +1,139 @@
+<main>
+    <h1 class="display-1 bg-info p-2 text-center">{{name}}</h1>
+
+    <div class="container text-center bg-secondary text-white ">
+        <div class="row">
+            <div class="col border">
+                {{ description}}
+            </div>
+            <div class="col border">
+                price: <br>{{ price}}
+            </div>
+            <div class="col border">
+                category: <br>{{ category}}
+            </div>
+        </div>
+    </div>
+    {{#with features}}
+    {{#with processor}}
+
+    {{>rocket name="Processor"}}
+
+    {{>table
+    name=brand prename="brand"
+    name-one=model prename-one="model"
+    name-sec=speed prename-sec="speed"
+    name-thi=cores prename-thi="cores"
+    name-four=cache prename-four="cache"
+    }}
+
+    {{/with}}
+    <br>
+
+    {{#with memory}}
+    {{>rocket name="Memory"}}
+    {{>table
+    name=type prename="type"
+    name-one=size prename-one="size"
+    name-sec=speed prename-sec="speed"
+    }}
+    {{/with}}
+    <br>
+
+    {{#with storage}}
+    {{>rocket name="Storage"}}
+    {{>table
+    name=type prename="type"
+    name-one=size prename-one="size"
+    }}
+    {{/with}}
+    <br>
+
+    {{#with display}}
+
+    {{>rocket name="Display"}}
+
+    {{>table
+    name=size prename="size"
+    name-one=resolution prename-one="resolution"
+    name-sec=technology prename-sec="technology"
+    name-thi=color_space prename-thi="color_space"
+    name-four=rightness prename-four="rightness"
+    name-five=refresh_rate prename-five="refresh_rate"
+    }}
+
+    {{/with}}
+    <br>
+
+    {{#with graphics}}
+    {{>rocket name=" Graphics"}}
+    {{>table
+    name=brand prename="brand"
+    name-one=model prename-one="model"
+    name-sec=memory prename-sec="memory"
+    }}
+    {{/with}}
+    <br>
+
+
+    {{>rocket name="Ports"}}
+    {{#each ports}}    
+
+    {{>table
+    name=type prename="type"
+    name-one=count prename-one="count"
+    }}
+    {{#if features}}
+    {{>table name=features prename="features"}}
+    {{/if}}
+
+    {{/each}}
+    <br>
+
+    {{#with  battery}}
+    {{>rocket name=" Battery"}}
+    {{>table
+    name=type prename="type"
+    name-one=capacity prename-one="capacity"
+    name-sec=life prename-sec="life"
+    }}
+    {{/with}}
+    <br>
+    {{>rocket name=" Weight" }}
+     {{>table
+    name=weight 
+    }}
+    <br>
+
+    {{#with  dimensions}}
+    {{>rocket name="Dimensions"}}
+    {{>table
+    name=height prename="height"
+    name-one=width prename-one="width"
+    name-sec=depth prename-sec="depth"
+    }}
+    {{/with}}
+    <br>
+
+    {{>rocket name="Operating system" }}
+     {{>table
+    name=operating_system 
+    }}
+    <br>
+
+    {{>rocket name="Accessories"}}
+    {{#each accessories}}    
+
+    {{>table
+    name=name prename="name"
+    name-one=price prename-one="price"
+    }}
+   
+    {{/each}}
+
+    {{/with}}
+
+
+
+
+</main>
