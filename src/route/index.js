@@ -1000,5 +1000,6 @@ router.get('/mac', function (req, res) {
 
 
 
+
 // Підключаємо роутер до бек-енду
 module.exports = router
