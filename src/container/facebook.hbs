@@ -1,0 +1,61 @@
+<main>
+    <h1 class="display-1 bg-info p-2 text-center">{{name}}</h1>
+   
+    
+    {{#each users}}
+    <div class="container text-center ">
+        <div class="row">
+            
+            <div class="col align-self-start border ">
+                {{>rocket name="Users"}}
+                <b>{{>face-self}}</b>
+            </div>
+            {{#each friends}}
+            <div class="col align-self-center bg-info border">
+                {{>rocket name="Friends"}}
+                {{>face-self}}
+            </div>
+            {{#each mutual_friends}}
+
+            <div class="col align-self-end bg-warning border">
+                {{>rocket name=" Mutual_friends"}}
+                {{>face-self}}
+            </div>
+            {{/each}}
+
+
+            {{#each groups}}
+
+            <div class="container text-center ">
+                <div class="row">
+
+                    <div class="col align-self-start border">
+                        {{>rocket name="Groups"}}
+                        <b>{{name}}</b>
+                        <i>[{{description}}]</i>
+                    </div>
+                    {{#each members}}
+                    <div class="col align-self-center bg-info border">
+                        {{>rocket name="Members"}}
+                        {{>face-self}}
+                    </div>
+                
+                    {{/each}}
+
+                </div>
+            </div>
+            {{/each}}
+
+
+            {{/each}}
+
+        </div>
+    </div>
+    {{/each}}
+
+
+   
+
+
+
+</main>
