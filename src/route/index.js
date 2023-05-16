@@ -1161,7 +1161,7 @@ router.get('/task21', function (req, res) {
 
   //            ↙ cюди вводимо назву файлу з сontainer
   res.render('task21', {
-    page:{ title: "Resume|TASK21",},
+    page:{ title: "Resume|TA21",},
     layout:"basic",
     heading: {
       main: {
