@@ -16,49 +16,52 @@
 			integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
 </head>
 
-<body>
+<body class="p-5">
   {{#with header}}
   <header>
-    <div>
+    <div class="mb-2">
       {{#with name}}
       <h1>{{firstname}} {{secondname}}</h1>
       {{/with}}
     </div>
-    <div>
+    <div class="mb-2">
       <b>{{position}}</b>
     </div>
-    <br>
-    <div>
+    
+    <div class="mb-2">
       <em>{{salary}}</em>
     </div>
-    <br>
+  
 
-    <div>
+    <div class="mb-2">
       <address>{{adress}}</adress>
     </div>
-    <br>
-    <hr>
+    
+    <hr class="my-4">
   </header>
   {{/with}}
-  {{>nav}}
+  <div class="mb-5">
+     {{>nav}}
+  </div>
+ 
   {{! ↓ ця кострукція показує куди шаблонізатору треба вставляти код з container файлу --}}
   {{{body}}}
+  <hr class="my-4">
   {{#with footer}}
-  <footer>
-    <hr>
-    <div>
+  <footer>    
+    <div class="mb-2">
       {{#with social}}
       {{>ll text=email.text href=email.href blank=true }}
       {{>ll text=phone.text href=phone.href blank=true }}
       {{>ll text=lincendin.text href=lincendin.href blank=true noLine=true }}
       {{/with}}
     </div>
-    <br>
-    <div>
+  
+    <div  class="mb-2">
       <em>Copyright by {{../header/name/firstname}} {{../header/name/secondname}}</header></em>
     </div>
-    <br>
-    <div>
+    
+    <div  class="mb-2">
       <address>{{../header/adress}}</adress>
     </div>
 
