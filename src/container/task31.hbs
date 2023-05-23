@@ -36,8 +36,7 @@
     <h2>{{title}}</h2>
    <br>
     {{#with table}}
-    <div class="row">
-        <div class="col-7">
+   
             <table class="table  text-center   ">
             <thead>
                 <tr>
@@ -55,10 +54,7 @@
                 {{/each}}
             </tbody>
         </table>
-
-        </div>
-        
-    </div>
+       
     {{/with}}
     {{/with}}
     <br>
@@ -124,7 +120,7 @@
     <br>
     <div class=" row g-2">
         {{#each card}}
-        <div class="col-5">
+        <div class="col-6">
             <div class="card text-bg-warning text-white">
                 <div class="card-header">
                     {{header}}
@@ -146,21 +142,21 @@
     <h5>{{title}}</h5>
     <br><br>
     <div class="row">
-        <div class="col-1">
+        <div class="col-4">
             {{#each navigation}}
             <a href="{{href}}" class="text-decoration-none">{{text}}</a>
             <br><br>
             {{/each}}
         </div>
-        <div class="col-2"></div>
-        <div class="col-1">
+        
+        <div class="col-4">
             {{#each socialMedia}}
             <a href="{{link}}" class="btn btn-outline-dark btn-sm">{{name}}</a>
             <br><br>
             {{/each}}
         </div>
-        <div class="col-2"></div>
-        <div class="col-1 ">
+    
+        <div class="col-4">
             {{#each partners}}
             <a href="{{link}}" class="btn btn-outline-info btn-sm">{{name}}</a>
             <br><br>
