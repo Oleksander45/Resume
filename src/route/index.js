@@ -1551,9 +1551,6 @@ router.get('/task31', function (req, res) {
 
 // ================================================================
 
-// router.get Створює нам один ентпоїнт
-
-//           ↙ тут вводимо шлях (PATH) до сторінки
 router.get('/shophome', function (req, res) {
   // res.render генерує нам HTML сторінку
 
@@ -1642,6 +1639,8 @@ router.get('/shophome', function (req, res) {
         },
       ],
     },
+
+
 
     goodsBlock: {
       tabs: [
@@ -1743,6 +1742,7 @@ router.get('/shophome', function (req, res) {
         },
       ],
     },
+
 
     footer: [
       [

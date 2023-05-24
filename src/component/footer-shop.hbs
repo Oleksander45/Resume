@@ -1,0 +1,22 @@
+<div class="row nav">
+    {{#each footer.[0]}}
+    <div class="nav-item col-3">        
+        <a class="nav-link text-decoration-none active" href="{{link}}">{{text}}</a>        
+    </div>
+    {{/each}}
+    {{#each footer.[1]}}
+    <div class="nav-item col-3">        
+        <a class="nav-link text-decoration-none" href="{{link}}">{{text}}</a>        
+    </div>
+    {{/each}}
+    {{#each footer.[2]}}
+    <div class="nav-item col-3">        
+        <a class="nav-link text-decoration-none" href="{{link}}">{{text}}</a>        
+    </div>
+    {{/each}}
+    {{#each footer.[3]}}
+    <div class="nav-item col-3">        
+        <a class="nav-link text-decoration-none disabled" href="{{link}}">{{text}}</a>        
+    </div>
+    {{/each}}
+</div>
