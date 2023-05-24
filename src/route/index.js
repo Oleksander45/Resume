@@ -1640,6 +1640,8 @@ router.get('/shophome', function (req, res) {
       ],
     },
 
+
+
     goodsBlock: {
       tabs: [
         {
@@ -1740,6 +1742,7 @@ router.get('/shophome', function (req, res) {
         },
       ],
     },
+
 
     footer: [
       [
