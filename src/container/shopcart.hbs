@@ -1,0 +1,70 @@
+<main class="container">
+    {{#with header}}
+    <h2 class="mb-5">{{title}}</h2>
+    {{#with button}}
+    <button href="{{link}}" class="btn btn-outline-secondary">{{text}}</button>
+    {{/with}}
+    {{/with}}
+
+    <hr class="my-4">
+
+    {{#each goodsBlock}}
+    <div class="card my-2">
+        <div class="card-body row">
+
+
+            <div class="col-2  mt-1"><img src="{{image}}" alt="#"></div>
+            <div class="col-4 text-sm">
+                <strong>{{name}}</strong>
+                <p class="mb-0">{{description}}</p>
+            </div>
+            <div class="col-2 mt-2">
+                {{price.title}}:
+                <p><b>{{price.value}}</b></p>
+            </div>
+            <div class="col-1 mt-4">{{amount}}</div>
+            <div class="col-1"></div>
+            <div class="col-2">
+                {{#each buttons}}
+                {{#if isPrimary}}
+                <button class="btn btn-primary  my-2">{{text}}</button>
+                {{/if}}
+                {{#if isDanger}}
+                <button class="btn btn-outline-danger my-2">{{text}}</button>
+                {{/if}}
+                {{/each}}
+            </div>
+        </div>
+    </div>
+    {{/each}}
+
+    <hr class="my-4">
+
+    {{#with total}}
+    <h3 class="mb-2 mt-5">{{title}}</h3>
+    <h2 class="mb-2">{{amount}}</h2>
+    <p>{{delivery}}</p>
+    {{#each buttons}}
+    <div>
+        {{#if isSuccess}}
+        <a href="{{link}}" class="btn btn-success  my-2">{{text}}</a>
+        {{/if}}
+    </div>
+    <div>
+        {{#if isOutline}}
+        <a href="{{link}}" class="btn btn-outline-success my-2">{{text}}</a>
+        {{/if}}
+    </div>
+    {{/each}}
+    {{/with}}
+
+    <hr class="my-5">
+    {{>goodother-shop}}
+
+    <hr class="my-4">
+    {{>subscribe-shop}}
+    <hr class="my-4">
+
+
+
+</main>

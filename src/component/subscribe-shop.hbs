@@ -1,0 +1,13 @@
+ {{#with subscribe}}
+    <div class="card ">
+        <div class="card-body text-bg-dark">
+            <h2>{{header}}</h2>
+            <p>{{description}}</p>
+            <div class="nav flex-column row">
+                {{#each buttons}}
+                <button href={{link}} class=" col-3 nav-item btn btn-primary btn-sm m-2">{{text}}</button>
+                {{/each}}
+            </div>
+        </div>
+    </div>
+    {{/with}}

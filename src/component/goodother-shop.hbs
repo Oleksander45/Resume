@@ -1,0 +1,24 @@
+ {{#with goodsOtherBlock}}
+    <h2 class="text-center mb-4">{{title}}</h2>
+
+    <div class="row g-2">
+        {{#each cards}}
+        <div class="col-4">
+            <div class="card ">
+                <img class="card-img-top mb-3" src="{{image}}" alt="#">
+                <h5 class="card-title">
+                    {{title}}
+                    {{#if idNew}}
+                    <span class="badge text-bg-primary rounded-pill">New</span>
+                    {{/if}}
+                    {{#if isHot}}
+                    <span class="badge text-bg-warning text-white rounded-pill">Hot</span>
+                    {{/if}}
+                </h5>
+                <p class="card-body  p-0">{{description}}</p>
+            </div>
+        </div>
+        {{/each}}
+    </div>
+
+    {{/with}}
