@@ -27,21 +27,7 @@
 
     <hr class="my-4">
     {{#with goodsBlock}}
-    <div class="row mb-5">
-        <nav class=" nav nav-tabs ms-0 col-12">
-            {{#each tabs}}
-            {{#if isActive}}
-            <div class="nav-item"> <a href="#" class="nav-link active">{{text}}</a></div>
-            {{else}}
-            {{#if isDisabled}}
-            <div class="nav-item"><a href="#" class="nav-link disabled">{{text}}</a></div>
-            {{else}}
-            <div class="nav-item"><a href="#" class="nav-link">{{text}}</a></div>
-            {{/if}}
-            {{/if}}
-            {{/each}}
-        </nav>
-    </div>
+    {{>nav-middle-shop}}
     <div class="row g-2">
         {{#each cards}}
         <div class="col-4">
