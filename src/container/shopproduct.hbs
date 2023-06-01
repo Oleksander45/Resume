@@ -1,15 +1,7 @@
 <main>
-    <nav class="nav breadcramb mb-5 ">
-        {{#each breadcrumb}}
-        <div class="nav-item breadcrumb-item ">
-            {{#if @last}}
-            <a href="{{url}}" class=" nav-link text-decoration-none disabled ">{{name}}</a>
-            {{else}}
-            <a href="{{url}}" class="nav-link text-decoration-none ">{{name}}</a>
-            {{/if}}
-        </div>
-        {{/each}}
-    </nav>
+
+    {{>bread-shop}}
+   
 
     {{#with productData}}
     <section class="row px-3">

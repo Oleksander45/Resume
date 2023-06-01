@@ -1,0 +1,79 @@
+<main class="cotainer row">
+
+    {{>bread-shop}}
+    <h2 class="mb-3">{{header}}</h2>
+
+    {{#each sortBlock}}
+    <div class="col-3 my-3">
+        <label for="select">{{label}}</label>
+        <select class=" form-select ">
+            <option selected>{{placeholder}}</option>
+            {{#each options}}
+            <option>{{text}}</option>
+            {{/each}}
+        </select>
+    </div>
+    {{/each}}
+
+    <div class="col-4">
+        <div class="card">
+            <div class="card-body">
+                {{#with filterBlock}}
+                {{#with sellers}}
+                {{>catalog-select data=list}}
+                {{/with}}
+
+                <hr class="my-2">
+
+                {{#with brands}}
+                <div class="form-label mb-2">{{title}}</div>
+                <select class=" form-select ">
+                    <option selected>{{input.placeholder}}</option>
+                    {{#each options}}
+                    <option>{{value}}</option>
+                    {{/each}}
+                </select>
+                {{#each options}}
+                <div class="form-check my-2">
+
+                    <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
+                    <label class="form-check-label" for="inlineCheckbox1">{{this.value}}</label>
+                </div>
+                {{/each}}
+                {{/with}}
+
+                <hr class="my-2">
+
+                {{#with price}}
+                <div class="form-label mb-2">{{title}}</div>
+                <input class="my-2" type="text" placeholder="{{range.from}}">
+                <input class="my-2" type="text" placeholder="{{range.to}}">
+                <div class="my-2">
+                    <a class="btn btn-outline-secondary" href="{{button.link}}">{{button.text}}</a>
+                </div>
+                {{/with}}
+
+                <hr class="my-2">
+
+                {{#each filterList}}
+                {{>catalog-select data=options}}
+                {{#unless @last}}
+                <hr class="my-2">
+                {{/unless}}
+                {{/each}}
+                {{/with}}
+
+            </div>
+        </div>
+    </div>
+    <div class="col-8">
+        <div class="row  g-3">
+           {{>catalogitem}}
+        </div>
+    </div>
+    <hr class="my-5">
+     {{>service-shop}}
+
+
+
+</main>
