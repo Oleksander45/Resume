@@ -1,7 +1,5 @@
 
- <a href="{{href}}"{{#if blank}}target="_blank"{{/if}}>{{text}}</a> 
- {{#unless noLine}}
- {{#if line}} *||*
- {{else}} //
- {{/if}}
- {{/unless}}
+
+ {{#if  line }} <a class="btn btn-light btn-lg text-warning" href="{{href}}">{{text}}</a> {{/if}}
+
+ {{#if  blank}} <a class="btn btn-light  btn-sm text-warning" href="{{href}}">{{text}}</a> {{/if}}
